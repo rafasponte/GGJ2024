@@ -4,3 +4,11 @@ res://Scenes/battle.tscn
 res://Scenes/card_ui.gd
 res://Scenes/battle/battle.tscn
 res://Scenes/card_ui/card_ui.tscn
+res://Scenes/card_ui/card_states/card_state.gd
+res://Scenes/card_ui/card_state_machine.gd
+res://Scenes/card_ui/card_states/card_base_state.gd
+res://Scenes/card_ui/card_states/card_clicked_state.gd
+res://Scenes/card_ui/card_states/card_dragging_state.gd
+res://Scenes/card_ui/card_states/card_released_state.gd
+res://Scenes/card_ui/card_ui.gd
+res://Scenes/ui/hand.gd
