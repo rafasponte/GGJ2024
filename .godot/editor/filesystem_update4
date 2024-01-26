@@ -1,3 +1,6 @@
-res://Scenes/battle.tscn
-res://main_theme.tres
 res://Scenes/card_ui.tscn
+res://main_theme.tres
+res://Scenes/battle.tscn
+res://Scenes/card_ui.gd
+res://Scenes/battle/battle.tscn
+res://Scenes/card_ui/card_ui.tscn

@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://8uenqb8dvnbq"]
+[gd_scene load_steps=4 format=3 uid="uid://daln6tdfcxtqa"]
 
 [ext_resource type="Theme" uid="uid://b470oxtrxqjsp" path="res://main_theme.tres" id="1_oj61o"]
+[ext_resource type="Script" path="res://Scenes/card_ui/card_ui.gd" id="1_prl2g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m8pas"]
 size = Vector2(25, 30)
 
-[node name="CardUi" type="Control"]
+[node name="CardUI" type="Control"]
+custom_minimum_size = Vector2(25, 30)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,6 +16,7 @@ offset_right = -231.0
 offset_bottom = -114.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_prl2g")
 
 [node name="Color" type="ColorRect" parent="."]
 layout_mode = 1
