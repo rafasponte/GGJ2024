@@ -1,0 +1,7 @@
+HBoxContainer
+CanvasLayer
+CollisionShape2D
+Area2D
+Label
+ColorRect
+Sprite2D
