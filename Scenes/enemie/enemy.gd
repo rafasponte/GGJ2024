@@ -39,11 +39,15 @@ func update_stats() -> void:
 	
 func update_action() -> void:
 	if not enemy_action_picker:
+		print("no action picker")
 		return
 		
 	if not current_action:
+		print("no action")
 		current_action = enemy_action_picker.get_action()
+		print("current action" + str(current_action))
 		return
+	
 	
 	var new_conditional_action := enemy_action_picker.get_first_conditional_action()
 	if new_conditional_action and current_action != new_conditional_action:
@@ -64,8 +68,10 @@ func do_turn() -> void:
 	stats.block = 0
 	
 	if not current_action:
+		print("no action to perform")
 		return
-		
+	
+	print("action to perform")
 	current_action.perform_action()
 	
 func take_damage(damage: int) -> void:

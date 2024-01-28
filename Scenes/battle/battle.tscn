@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://koco0ag4rgo1"]
+[gd_scene load_steps=16 format=3 uid="uid://koco0ag4rgo1"]
 
 [ext_resource type="Script" path="res://Scenes/battle/battle.gd" id="1_5p4pa"]
 [ext_resource type="Texture2D" uid="uid://bp804i5pubrud" path="res://Art/Fundo.PNG" id="1_ocyi2"]
@@ -8,10 +8,12 @@
 [ext_resource type="Script" path="res://Scenes/ui/hand.gd" id="2_yhfo6"]
 [ext_resource type="PackedScene" uid="uid://b8kqwibvoa6o6" path="res://Scenes/enemie/enemy.tscn" id="3_ip8ak"]
 [ext_resource type="Script" path="res://Scenes/enemie/enemy_handler.gd" id="5_44iw3"]
+[ext_resource type="Texture2D" uid="uid://bnwl2xkp2bx2e" path="res://Art/frame_01_palhaco.png" id="5_77hhb"]
 [ext_resource type="Script" path="res://Scenes/ui/battle_ui.gd" id="6_xcapg"]
 [ext_resource type="Texture2D" uid="uid://c3c5yjbs7xsnc" path="res://Art/life bar.PNG" id="9_n3byn"]
 [ext_resource type="Texture2D" uid="uid://pq07le5eyk74" path="res://Art/life bar green.PNG" id="10_vkvpd"]
 [ext_resource type="Texture2D" uid="uid://bq2cap6jyw38a" path="res://Art/Icon ouriço .PNG" id="11_nasns"]
+[ext_resource type="Texture2D" uid="uid://du8ghehobgghw" path="res://Art/Icon palhaço .PNG" id="14_ys0n8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uqfcu"]
 size = Vector2(1150, 426)
@@ -45,6 +47,13 @@ light_mask = 2
 position = Vector2(575, 213)
 shape = SubResource("RectangleShape2D_uqfcu")
 
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(283, 259)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_77hhb")
+
 [node name="EnemyHandler" type="Node2D" parent="."]
 script = ExtResource("5_44iw3")
 
@@ -75,11 +84,21 @@ script = ExtResource("2_yhfo6")
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="BattleUI"]
-offset_left = 773.0
-offset_top = 11.0
-offset_right = 1246.0
-offset_bottom = 167.0
-scale = Vector2(0.7, 0.7)
+offset_left = 808.0
+offset_top = 21.0
+offset_right = 1281.0
+offset_bottom = 177.0
+scale = Vector2(0.6, 0.6)
+value = 100.0
+texture_under = ExtResource("9_n3byn")
+texture_progress = ExtResource("10_vkvpd")
+
+[node name="TextureProgressBar2" type="TextureProgressBar" parent="BattleUI"]
+offset_left = 54.0
+offset_top = 16.0
+offset_right = 527.0
+offset_bottom = 172.0
+scale = Vector2(0.6, 0.6)
 value = 100.0
 texture_under = ExtResource("9_n3byn")
 texture_progress = ExtResource("10_vkvpd")
@@ -91,3 +110,11 @@ offset_right = 1855.0
 offset_bottom = 854.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("11_nasns")
+
+[node name="TextureRect2" type="TextureRect" parent="BattleUI"]
+offset_left = 21.0
+offset_top = 12.0
+offset_right = 942.0
+offset_bottom = 1058.0
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("14_ys0n8")

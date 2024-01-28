@@ -9,7 +9,8 @@ func enter() ->void:
 		played = true
 		print("play card for target(s)", card_ui.targets)
 		
-	#Events.player_turn_ended.emit()
+	Events.player_turn_ended.emit()
+	card_ui.queue_free()
 
 func on_input(_event: InputEvent) -> void:
 	if played:

@@ -4,7 +4,7 @@ extends Node
 @export var enemy: Enemy: set = _set_enemy
 @export var target: Node2D: set = _set_target
 
-@onready var total_weight := 0.0
+@onready var total_weight : float = 1.0
 
 func ready() -> void:
 	target = get_tree().get_first_node_in_group("player")
@@ -14,7 +14,8 @@ func get_action() -> EnemyAction:
 	var action := get_first_conditional_action()
 	if action:
 		return action
-		
+	
+	print("no conditional action")
 	return get_chance_based_action()
 
 func get_first_conditional_action() -> EnemyAction:
@@ -32,16 +33,18 @@ func get_first_conditional_action() -> EnemyAction:
 	
 func get_chance_based_action() -> EnemyAction:
 	var action: EnemyAction
-	var roll := randf_range(0.0, total_weight)
+	var roll : float = randf_range(0.0, total_weight)
 	
 	for child in get_children():
 		action = child as EnemyAction
 		if not action or action.type != EnemyAction.Type.CHANCE_BASED:
 			continue
 		
+		print("chance based action" + str(action.accumulated_weight) + " " + str(roll))
 		if action.accumulated_weight > roll:
 			return action
 	
+	print("return null")
 	return null
 	
 func setup_chances() -> void:

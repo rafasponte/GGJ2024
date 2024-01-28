@@ -3,7 +3,7 @@ extends EnemyAction
 @export var block := 6
 
 func perform_action() -> void:
-	if not enemy or not target:
+	if not enemy: #or not target
 		return
 		
 	#var block_effect := BlockEffect.new()

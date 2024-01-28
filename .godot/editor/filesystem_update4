@@ -20,3 +20,13 @@ res://characters/player/cards/stairs.tres
 res://characters/player/cards/eyes.tres
 res://characters/player/cards/picture.tres
 res://characters/player/player_starting_deck.tres
+res://Scenes/enemie/enemy.gd
+res://Scenes/enemie/enemy_action_picker.tscn
+res://Scenes/enemie/enemy_action_picker.gd
+res://Scenes/enemie/enemy_action.gd
+res://enemie/spiky/spiky_attack_action.gd
+res://enemie/spiky/spiky_block_action.gd
+res://enemie/spiky/spiky_mega_block_action.gd
+res://characters/player/cards/susage.tres
+res://characters/player/cards/wave.tres
+res://characters/player/cards/invisible.tres

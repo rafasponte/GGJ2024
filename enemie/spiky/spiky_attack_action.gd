@@ -3,7 +3,7 @@ extends EnemyAction
 @export var damage := 7
 
 func perform_action() -> void:
-	if not enemy or not target:
+	if not enemy: #or not target
 		return
 	
 	var tween := create_tween().set_trans(Tween.TRANS_QUINT)
@@ -18,8 +18,11 @@ func perform_action() -> void:
 	tween.tween_interval(0.25)
 	tween.tween_property(enemy, "global_position", start, 0.4)
 	
+	print("performed action")
+	
 	tween.finished.connect(
 		func():
+			print("emited event")
 			Events.enemy_action_completed.emit(enemy)
 	)
 	
