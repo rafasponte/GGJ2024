@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://c27p7vclh0xux"]
+
+[ext_resource type="Texture2D" uid="uid://bvn4f61h4lvgm" path="res://Art/omelet.png" id="1_2h6yj"]
+[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_lo7ye"]
+
+[resource]
+script = ExtResource("1_lo7ye")
+id = "eggs"
+type = 0
+target = 1
+art = ExtResource("1_2h6yj")

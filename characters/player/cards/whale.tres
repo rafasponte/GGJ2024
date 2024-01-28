@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://080lefykqmg0"]
+
+[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_carwy"]
+[ext_resource type="Texture2D" uid="uid://ctwjjyqujhan6" path="res://Art/whale.png" id="1_fslga"]
+
+[resource]
+script = ExtResource("1_carwy")
+id = "whale"
+type = 1
+target = 0
+art = ExtResource("1_fslga")

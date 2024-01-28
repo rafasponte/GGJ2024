@@ -15,10 +15,12 @@ run/main_scene="res://Scenes/battle/battle.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://Art/clown-face.png"
 
+[autoload]
+
+Events="*res://global/events.gd"
+
 [display]
 
-window/size/viewport_width=256
-window/size/viewport_height=144
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
@@ -42,7 +44,4 @@ right_mouse={
 2d_render/layer_2="card_drop_area"
 2d_physics/layer_1="card_target_selector"
 2d_physics/layer_2="card_drop_area"
-
-[rendering]
-
-textures/canvas_textures/default_texture_filter=0
+2d_physics/layer_3="enemies"

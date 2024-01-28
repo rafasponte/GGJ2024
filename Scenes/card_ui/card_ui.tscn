@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://daln6tdfcxtqa"]
+[gd_scene load_steps=10 format=3 uid="uid://daln6tdfcxtqa"]
 
 [ext_resource type="Theme" uid="uid://b470oxtrxqjsp" path="res://main_theme.tres" id="1_oj61o"]
 [ext_resource type="Script" path="res://Scenes/card_ui/card_ui.gd" id="1_prl2g"]
+[ext_resource type="Texture2D" uid="uid://dpn64llk0sac0" path="res://Art/invis.png" id="2_qgnil"]
 [ext_resource type="Script" path="res://Scenes/card_ui/card_state_machine.gd" id="3_lnvuq"]
 [ext_resource type="Script" path="res://Scenes/card_ui/card_states/card_base_state.gd" id="4_5utub"]
 [ext_resource type="Script" path="res://Scenes/card_ui/card_states/card_clicked_state.gd" id="5_fo5hp"]
@@ -9,35 +10,27 @@
 [ext_resource type="Script" path="res://Scenes/card_ui/card_states/card_released_state.gd" id="7_dxl8s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m8pas"]
-size = Vector2(25, 30)
+size = Vector2(172, 259.5)
 
 [node name="CardUI" type="Control"]
-custom_minimum_size = Vector2(25, 30)
+custom_minimum_size = Vector2(200, 30)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -231.0
-offset_bottom = -114.0
+offset_right = -1030.0
+offset_bottom = -467.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_prl2g")
-
-[node name="Color" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0.611765, 0.258824, 1)
 
 [node name="State" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1.5
+offset_right = 1.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_oj61o")
@@ -45,12 +38,22 @@ text = "state"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Color" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 2.0
+offset_right = 381.0
+offset_bottom = 514.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_qgnil")
+
 [node name="DropPointDetector" type="Area2D" parent="."]
+position = Vector2(41, 1)
 collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector"]
-position = Vector2(12.5, 15)
+position = Vector2(84, 128.25)
 shape = SubResource("RectangleShape2D_m8pas")
 
 [node name="CardStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]

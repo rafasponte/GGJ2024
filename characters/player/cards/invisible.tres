@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://cju2wyv8fot2k"]
+
+[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_y04ck"]
+[ext_resource type="Texture2D" uid="uid://dpn64llk0sac0" path="res://Art/invis.png" id="1_y4oty"]
+
+[resource]
+script = ExtResource("1_y04ck")
+id = "invisible"
+type = 1
+target = 0
+art = ExtResource("1_y4oty")

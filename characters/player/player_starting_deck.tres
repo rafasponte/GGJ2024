@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CardPile" load_steps=14 format=3 uid="uid://d3ks36of4sme7"]
+
+[ext_resource type="Resource" uid="uid://cs7a2weqgcfhx" path="res://characters/player/cards/susage.tres" id="1_0rsw0"]
+[ext_resource type="Resource" uid="uid://bus6na7liblho" path="res://characters/player/cards/bycicle.tres" id="1_av04t"]
+[ext_resource type="Script" path="res://custom_resources/card_pile.gd" id="1_k7tyy"]
+[ext_resource type="Resource" uid="uid://c21fijx2fprlu" path="res://characters/player/cards/cake.tres" id="2_plp04"]
+[ext_resource type="Resource" uid="uid://cpwu25amhkblk" path="res://characters/player/cards/wave.tres" id="2_v4clm"]
+[ext_resource type="Resource" uid="uid://c27p7vclh0xux" path="res://characters/player/cards/eggs.tres" id="3_betkq"]
+[ext_resource type="Resource" uid="uid://cju2wyv8fot2k" path="res://characters/player/cards/invisible.tres" id="3_m6ktp"]
+[ext_resource type="Resource" uid="uid://bc0s2x1pj1cyr" path="res://characters/player/cards/eyes.tres" id="4_qufci"]
+[ext_resource type="Resource" uid="uid://chrsrvenuvi54" path="res://characters/player/cards/fish.tres" id="5_d6h0d"]
+[ext_resource type="Resource" uid="uid://chrfpveh4yj5i" path="res://characters/player/cards/picture.tres" id="7_8q7vy"]
+[ext_resource type="Resource" uid="uid://c5y7lpts0fyju" path="res://characters/player/cards/stairs.tres" id="8_gne6r"]
+[ext_resource type="Resource" uid="uid://1m31lut4571p" path="res://characters/player/cards/switzerland.tres" id="10_05jgi"]
+[ext_resource type="Resource" uid="uid://080lefykqmg0" path="res://characters/player/cards/whale.tres" id="12_4k14e"]
+
+[resource]
+script = ExtResource("1_k7tyy")
+cards = Array[Resource("res://custom_resources/card.gd")]([ExtResource("1_av04t"), ExtResource("2_plp04"), ExtResource("3_betkq"), ExtResource("4_qufci"), ExtResource("5_d6h0d"), ExtResource("3_m6ktp"), ExtResource("7_8q7vy"), ExtResource("8_gne6r"), ExtResource("1_0rsw0"), ExtResource("10_05jgi"), ExtResource("2_v4clm"), ExtResource("12_4k14e")])

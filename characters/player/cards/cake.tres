@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://c21fijx2fprlu"]
+
+[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_45nap"]
+[ext_resource type="Texture2D" uid="uid://bee0d5c2ly8h5" path="res://Art/cake.png" id="1_yn4lu"]
+
+[resource]
+script = ExtResource("1_45nap")
+id = "cake"
+type = 1
+target = 0
+art = ExtResource("1_yn4lu")

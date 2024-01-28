@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8kqwibvoa6o6"]
+
+[ext_resource type="Texture2D" uid="uid://dr08asplmuesx" path="res://Art/frame_01_ourico.png" id="1_5vdxd"]
+[ext_resource type="Script" path="res://Scenes/enemie/enemy.gd" id="1_rpitq"]
+[ext_resource type="Resource" uid="uid://c0ylnwqa23tyw" path="res://enemie/spiky/spiky_enemy.tres" id="2_n7e2t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n20ed"]
+size = Vector2(214, 248)
+
+[node name="Enemy" type="Area2D" groups=["enemies"]]
+position = Vector2(900, 270)
+collision_layer = 4
+script = ExtResource("1_rpitq")
+stats = ExtResource("2_n7e2t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.257407, 0.257407)
+texture = ExtResource("1_5vdxd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_n20ed")
+
+[node name="Arrow" type="Sprite2D" parent="."]

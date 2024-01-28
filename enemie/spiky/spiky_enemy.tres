@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=4 format=3 uid="uid://c0ylnwqa23tyw"]
+
+[ext_resource type="PackedScene" uid="uid://1fblmeiw8tq1" path="res://enemie/spiky/spiky_enemy_ai.tscn" id="1_74nfd"]
+[ext_resource type="Script" path="res://custom_resources/enemy_stats.gd" id="1_dpx8j"]
+[ext_resource type="Texture2D" uid="uid://dr08asplmuesx" path="res://Art/frame_01_ourico.png" id="2_ghp6p"]
+
+[resource]
+script = ExtResource("1_dpx8j")
+ai = ExtResource("1_74nfd")
+max_health = 10
+art = ExtResource("2_ghp6p")
