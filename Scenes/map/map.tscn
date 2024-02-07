@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6higui737uwq"]
+[gd_scene load_steps=8 format=3 uid="uid://b6higui737uwq"]
 
 [ext_resource type="Texture2D" uid="uid://cqqm1m7e8vmsq" path="res://Art/map.PNG" id="1_emmii"]
 [ext_resource type="Script" path="res://Scenes/map/shop.gd" id="2_rfq78"]
 [ext_resource type="Texture2D" uid="uid://c6xexdiscqqn5" path="res://Art/yellow ball.PNG" id="3_qn8yi"]
 [ext_resource type="Texture2D" uid="uid://g82gw20bp57s" path="res://Art/play.PNG" id="4_bvjop"]
+[ext_resource type="Texture2D" uid="uid://bnwl2xkp2bx2e" path="res://Art/frame_01_palhaco.png" id="4_lil8t"]
 [ext_resource type="Script" path="res://Scenes/map/play.gd" id="5_yyfgh"]
 [ext_resource type="FontFile" uid="uid://c17pagbfe8fdy" path="res://carnivalee-freakshow-font/CarnivaleeFreakshow-DLrm.ttf" id="6_6jrr1"]
 
@@ -33,6 +34,11 @@ texture = ExtResource("3_qn8yi")
 position = Vector2(263, 478)
 scale = Vector2(0.091491, 0.091491)
 texture = ExtResource("3_qn8yi")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
+position = Vector2(54.6505, -524.642)
+scale = Vector2(1.61851, 1.61851)
+texture = ExtResource("4_lil8t")
 
 [node name="Play" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(100, 100)
