@@ -19,6 +19,8 @@ func perform_action() -> void:
 	tween.tween_property(enemy, "global_position", start, 0.4)
 	
 	print("performed action")
+	enemy.target.take_damage(5)
+	#target.take_damage(5)
 	
 	tween.finished.connect(
 		func():

@@ -25,6 +25,8 @@ func take_damage(damage: int) -> void:
 	super.take_damage(damage)
 	if initial_health > health:
 		Events.player_hit.emit()
+	if health <= 0:
+		Events.player_died.emit()
 
 
 func can_play_card(card: Card) -> bool:

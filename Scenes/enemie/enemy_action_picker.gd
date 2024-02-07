@@ -8,6 +8,11 @@ extends Node
 
 func ready() -> void:
 	target = get_tree().get_first_node_in_group("player")
+	print("target: " + str(target))
+	for action in get_children():
+		print(action)
+		action.target = target
+	
 	setup_chances()
 	
 func get_action() -> EnemyAction:
@@ -65,7 +70,8 @@ func _set_enemy(value: Enemy) -> void:
 		action.enemy = enemy
 		
 func _set_target(value: Node2D) -> void:
-	target = value
+	#target = value
+	print("we are setting the target but it is null")
 	
-	for action in get_children():
-		action.target = target
+	#for action in get_children():
+	#	action.target = target

@@ -1,7 +1,10 @@
+RichTextLabel
+TextureButton
 Sprite2D
+Panel
+Control
 Node2D
 TextureRect
-Control
 TextureProgressBar
 MarginContainer
 CollisionShape2D

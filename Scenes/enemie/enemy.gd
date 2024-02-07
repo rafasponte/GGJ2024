@@ -4,10 +4,11 @@ extends Area2D
 const ARROW_OFFSET := 5
 
 @export var stats: EnemyStats : set = set_enemy_stats
+@export var target: Node2D
+@export var health_bar : TextureProgressBar
 
 @onready var sprite_2d : Sprite2D = $Sprite2D
 @onready var arrow: Sprite2D = $Arrow
-#@onready var stats_ui : StatsUI = $StatsUI as StatsUI
 
 var enemy_action_picker: EnemyActionPicker
 var current_action: EnemyAction : set = set_current_action
@@ -16,7 +17,9 @@ func set_current_action(value : EnemyAction) -> void:
 	current_action = value
 	
 func set_enemy_stats(value: EnemyStats) -> void:
+	print("set enemy stats")
 	stats = value.create_instance()
+	stats.health = 30
 	
 	if not stats.stats_changed.is_connected(update_stats):
 		stats.stats_changed.connect(update_stats)
@@ -34,8 +37,7 @@ func setup_ai() -> void:
 	enemy_action_picker.enemy = self
 
 func update_stats() -> void:
-	#stats_ui.update_stats(stats)
-	pass
+	health_bar.value = stats.health
 	
 func update_action() -> void:
 	if not enemy_action_picker:
@@ -62,7 +64,6 @@ func update_enemy() -> void:
 	sprite_2d.texture = stats.art
 	arrow.position = Vector2.RIGHT * (sprite_2d.get_rect().size.x / 2 + ARROW_OFFSET)
 	setup_ai()
-	update_stats()
 	
 func do_turn() -> void:
 	stats.block = 0
@@ -75,12 +76,16 @@ func do_turn() -> void:
 	current_action.perform_action()
 	
 func take_damage(damage: int) -> void:
+	print("enemy taking damage" + str(damage) + " " + str(stats.health))
+	
 	if stats.health <= 0:
 		return
 		
 	stats.take_damage(damage)
+	update_stats()
 	
 	if stats.health <= 0:
+		Events.enemy_died.emit()
 		queue_free()
 	
 	

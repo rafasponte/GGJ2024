@@ -5,11 +5,14 @@ const HAND_DRAW_INTERVAL := 0.25
 const HAND_DISCARD_INTERVAL := 0.25
 
 @export var hand: Hand
+@export var healthBar : TextureProgressBar
+@export var enemy : Enemy
 
 var character: CharacterStats
 
 func _ready() -> void:
 	Events.card_played.connect(_on_card_played)
+	Events.player_hit.connect(_on_player_hit)
 
 func start_battle(char_stats: CharacterStats) -> void:
 	character = char_stats
@@ -65,3 +68,18 @@ func reshuffle_deck_from_discard() -> void:
 	
 func _on_card_played(card: Card) -> void:
 	character.discard.add_card(card)
+	print("on card played")
+	if card.type == Card.Type.ATTACK:
+		enemy.take_damage(5)
+	elif card.type == Card.Type.DEFEND:
+		character.block += 5
+	
+func take_damage(damage: int) -> void:
+	if character.health <= 0:
+		return
+		
+	character.take_damage(damage)
+	
+func _on_player_hit() -> void:
+	healthBar.value = character.health
+	

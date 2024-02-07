@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://koco0ag4rgo1"]
+[gd_scene load_steps=20 format=3 uid="uid://koco0ag4rgo1"]
 
 [ext_resource type="Script" path="res://Scenes/battle/battle.gd" id="1_5p4pa"]
 [ext_resource type="Texture2D" uid="uid://bp804i5pubrud" path="res://Art/Fundo.PNG" id="1_ocyi2"]
@@ -9,11 +9,15 @@
 [ext_resource type="PackedScene" uid="uid://b8kqwibvoa6o6" path="res://Scenes/enemie/enemy.tscn" id="3_ip8ak"]
 [ext_resource type="Script" path="res://Scenes/enemie/enemy_handler.gd" id="5_44iw3"]
 [ext_resource type="Texture2D" uid="uid://bnwl2xkp2bx2e" path="res://Art/frame_01_palhaco.png" id="5_77hhb"]
+[ext_resource type="Script" path="res://Scenes/player/player.gd" id="5_eqh84"]
 [ext_resource type="Script" path="res://Scenes/ui/battle_ui.gd" id="6_xcapg"]
 [ext_resource type="Texture2D" uid="uid://c3c5yjbs7xsnc" path="res://Art/life bar.PNG" id="9_n3byn"]
 [ext_resource type="Texture2D" uid="uid://pq07le5eyk74" path="res://Art/life bar green.PNG" id="10_vkvpd"]
 [ext_resource type="Texture2D" uid="uid://bq2cap6jyw38a" path="res://Art/Icon ouriço .PNG" id="11_nasns"]
 [ext_resource type="Texture2D" uid="uid://du8ghehobgghw" path="res://Art/Icon palhaço .PNG" id="14_ys0n8"]
+[ext_resource type="Texture2D" uid="uid://c6xexdiscqqn5" path="res://Art/yellow ball.PNG" id="15_pcuof"]
+[ext_resource type="FontFile" uid="uid://c17pagbfe8fdy" path="res://carnivalee-freakshow-font/CarnivaleeFreakshow-DLrm.ttf" id="16_kd8p4"]
+[ext_resource type="Texture2D" uid="uid://bto52r64wjodk" path="res://Art/grey ball.PNG" id="17_5h7sj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uqfcu"]
 size = Vector2(1150, 426)
@@ -47,8 +51,10 @@ light_mask = 2
 position = Vector2(575, 213)
 shape = SubResource("RectangleShape2D_uqfcu")
 
-[node name="Player" type="Node2D" parent="."]
+[node name="Player" type="Node2D" parent="." node_paths=PackedStringArray("player_handler") groups=["player"]]
 position = Vector2(283, 259)
+script = ExtResource("5_eqh84")
+player_handler = NodePath("../PlayerHandler")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 scale = Vector2(0.25, 0.25)
@@ -57,12 +63,16 @@ texture = ExtResource("5_77hhb")
 [node name="EnemyHandler" type="Node2D" parent="."]
 script = ExtResource("5_44iw3")
 
-[node name="Enemy" parent="EnemyHandler" instance=ExtResource("3_ip8ak")]
+[node name="Enemy" parent="EnemyHandler" node_paths=PackedStringArray("target", "health_bar") instance=ExtResource("3_ip8ak")]
 position = Vector2(865, 254)
+target = NodePath("../../Player")
+health_bar = NodePath("../../BattleUI/TextureProgressBar")
 
-[node name="PlayerHandler" type="Node" parent="." node_paths=PackedStringArray("hand")]
+[node name="PlayerHandler" type="Node" parent="." node_paths=PackedStringArray("hand", "healthBar", "enemy")]
 script = ExtResource("2_61npu")
 hand = NodePath("../BattleUI/Hand")
+healthBar = NodePath("../BattleUI/TextureProgressBar2")
+enemy = NodePath("../EnemyHandler/Enemy")
 
 [node name="BattleUI" type="CanvasLayer" parent="." groups=["ui_layer"]]
 script = ExtResource("6_xcapg")
@@ -89,7 +99,8 @@ offset_top = 21.0
 offset_right = 1281.0
 offset_bottom = 177.0
 scale = Vector2(0.6, 0.6)
-value = 100.0
+max_value = 30.0
+value = 30.0
 texture_under = ExtResource("9_n3byn")
 texture_progress = ExtResource("10_vkvpd")
 
@@ -99,7 +110,8 @@ offset_top = 16.0
 offset_right = 527.0
 offset_bottom = 172.0
 scale = Vector2(0.6, 0.6)
-value = 100.0
+max_value = 30.0
+value = 30.0
 texture_under = ExtResource("9_n3byn")
 texture_progress = ExtResource("10_vkvpd")
 
@@ -118,3 +130,56 @@ offset_right = 942.0
 offset_bottom = 1058.0
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("14_ys0n8")
+
+[node name="Win" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Win"]
+position = Vector2(587, 247)
+scale = Vector2(0.370482, 0.370482)
+texture = ExtResource("15_pcuof")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Win"]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 190.0
+offset_right = 721.0
+offset_bottom = 301.0
+theme_override_fonts/normal_font = ExtResource("16_kd8p4")
+theme_override_font_sizes/normal_font_size = 90
+text = "WIN"
+
+[node name="Panel" type="Panel" parent="Win"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Loose" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Loose"]
+position = Vector2(587, 247)
+scale = Vector2(0.370482, 0.370482)
+texture = ExtResource("17_5h7sj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Loose"]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 185.0
+offset_right = 692.0
+offset_bottom = 296.0
+theme_override_fonts/normal_font = ExtResource("16_kd8p4")
+theme_override_font_sizes/normal_font_size = 90
+text = "LOOSE"
+
+[connection signal="child_exiting_tree" from="EnemyHandler" to="." method="_on_enemy_handler_child_exiting_tree"]
+
+[editable path="EnemyHandler/Enemy"]

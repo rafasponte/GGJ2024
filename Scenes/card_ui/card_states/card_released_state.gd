@@ -9,6 +9,7 @@ func enter() ->void:
 		played = true
 		print("play card for target(s)", card_ui.targets)
 		
+	Events.card_played.emit(get_parent().get_parent().card)
 	Events.player_turn_ended.emit()
 	card_ui.queue_free()
 

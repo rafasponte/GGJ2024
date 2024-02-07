@@ -11,7 +11,10 @@ signal card_played(card: Card)
 signal player_hand_drawn
 signal player_hand_discarded
 signal player_turn_ended
+signal player_hit
+signal player_died
 
 #Enemy-related events
 signal enemy_action_completed(enemy: Enemy)
 signal enemy_turn_ended
+signal enemy_died

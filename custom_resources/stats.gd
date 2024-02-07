@@ -3,7 +3,7 @@ extends Resource
 
 signal stats_changed
 
-@export var max_health := 1
+@export var max_health := 30
 @export var art: Texture
 
 var health: int : set = set_health
