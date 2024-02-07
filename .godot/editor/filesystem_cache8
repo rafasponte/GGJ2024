@@ -1,9 +1,9 @@
 2a60927148abd1d33b818b535e306557
-::res://::1707319196
+::res://::1707330555
 export_presets.cfg::TextFile::-1::1706443274::0::1::::<><>::
-health_bar.tscn::PackedScene::6208985121997118949::1707319117::0::1::::<><>::uid://c3c5yjbs7xsnc<>uid://pq07le5eyk74
-main_theme.tres::Theme::4489501401451898215::1707317382::0::1::::<><>::
-::res://Art/::1706417232
+health_bar.tscn::PackedScene::6208985121997118949::1707330555::0::1::::<><>::uid://c3c5yjbs7xsnc<>uid://pq07le5eyk74
+main_theme.tres::Theme::4489501401451898215::1707319539::0::1::::<><>::
+::res://Art/::1707332117
 71072ce6-432a-4af1-97d0-881b5f8c58dc.png::CompressedTexture2D::9215865086653769612::1706388112::1706388112::1::::<><>::
 basket.PNG::CompressedTexture2D::2428762411031621391::1706388112::1706388416::1::::<><>::
 bike.png::CompressedTexture2D::1833070058020699095::1706388112::1706388415::1::::<><>::
@@ -20,6 +20,7 @@ Fundo.PNG::CompressedTexture2D::3508947984229214359::1706388112::1706388416::1::
 grey ball.PNG::CompressedTexture2D::3750780669724265392::1706388112::1706388415::1::::<><>::
 Icon ouriço .PNG::CompressedTexture2D::3565302651427844194::1706388112::1706388415::1::::<><>::
 Icon palhaço .PNG::CompressedTexture2D::8631540413782563292::1706388112::1706388415::1::::<><>::
+IMG_2244.png::CompressedTexture2D::8725986614556617426::1707331020::1707331026::1::::<><>::
 invis.png::CompressedTexture2D::8240866226489738749::1706388112::1706388414::1::::<><>::
 life bar black.PNG::CompressedTexture2D::2081756653817543535::1706388112::1706388414::1::::<><>::
 life bar green.PNG::CompressedTexture2D::1087438354164993733::1706388112::1706388414::1::::<><>::
@@ -33,6 +34,7 @@ sausage.png::CompressedTexture2D::3200955239694237697::1706388112::1706388414::1
 sell, exit.PNG::CompressedTexture2D::7624800154922260385::1706388112::1706388415::1::::<><>::
 shop.PNG::CompressedTexture2D::7927770168353917188::1706388112::1706388415::1::::<><>::
 stairs.png::CompressedTexture2D::8625668837793462467::1706388112::1706388413::1::::<><>::
+Tiny shop.png::CompressedTexture2D::4384072295005509814::1707331988::1707332123::1::::<><>::
 wave.png::CompressedTexture2D::3948490987656326125::1706388112::1706388413::1::::<><>::
 whale.png::CompressedTexture2D::6152409518376459937::1706388112::1706388413::1::::<><>::
 yellow ball.PNG::CompressedTexture2D::6996460320489103224::1706388112::1706388414::1::::<><>::
@@ -45,9 +47,9 @@ info.txt::TextFile::-1::1706446385::0::1::::<><>::
 ::res://characters/player/::1706429589
 player.tres::Resource/Resource::8352679375053434817::1706423896::0::1::::<><>::res://custom_resources/character_stats.gd
 player_starting_deck.tres::Resource/Resource::9146338008701709784::1706429589::0::1::::<><>::uid://cs7a2weqgcfhx<>uid://bus6na7liblho<>res://custom_resources/card_pile.gd<>uid://c21fijx2fprlu<>uid://cpwu25amhkblk<>uid://c27p7vclh0xux<>uid://cju2wyv8fot2k<>uid://bc0s2x1pj1cyr<>uid://chrsrvenuvi54<>uid://chrfpveh4yj5i<>uid://c5y7lpts0fyju<>uid://1m31lut4571p<>uid://080lefykqmg0
-::res://characters/player/cards/::1706441105
-bycicle.tres::Resource/Resource::3829261848067622672::1706429265::0::1::::<><>::res://custom_resources/card.gd<>uid://1d7np28p0qwt
-cake.tres::Resource/Resource::6721932348008402742::1706429388::0::1::::<><>::res://custom_resources/card.gd<>uid://bee0d5c2ly8h5
+::res://characters/player/cards/::1707322450
+bycicle.tres::Resource/Card::3829261848067622672::1707322450::0::1::::<><>::res://custom_resources/card.gd<>uid://1d7np28p0qwt
+cake.tres::Resource/Card::6721932348008402742::1707322450::0::1::::<><>::res://custom_resources/card.gd<>uid://bee0d5c2ly8h5
 eggs.tres::Resource/Resource::6734969240629558707::1706429265::0::1::::<><>::uid://bvn4f61h4lvgm<>res://custom_resources/card.gd
 eyes.tres::Resource/Resource::2579550186022440329::1706429504::0::1::::<><>::uid://c0s5g0anehjp0<>res://custom_resources/card.gd
 fish.tres::Resource/Resource::5300382068825418177::1706429388::0::1::::<><>::res://custom_resources/card.gd<>uid://tyu66uxlyp7w
@@ -58,45 +60,49 @@ susage.tres::Resource/Resource::6102350019864120329::1706441105::0::1::::<><>::r
 switzerland.tres::Resource/Resource::1851429583632731299::1706429146::0::1::::<><>::res://custom_resources/card.gd<>uid://jtnfs787s83q
 wave.tres::Resource/Resource::5872354465092242756::1706441105::0::1::::<><>::res://custom_resources/card.gd<>uid://bwixcms5rdogb
 whale.tres::Resource/Resource::1824383344308776821::1706429388::0::1::::<><>::res://custom_resources/card.gd<>uid://ctwjjyqujhan6
-::res://custom_resources/::1707317937
+::res://custom_resources/::1707323594
 card.gd::GDScript::-1::1706416545::0::1::::Card<>Resource<>::
 card_pile.gd::GDScript::-1::1706414241::0::1::::CardPile<>Resource<>::
 character_stats.gd::GDScript::-1::1707317937::0::1::::CharacterStats<>Stats<>::
-enemy_stats.gd::GDScript::-1::1706399019::0::1::::EnemyStats<>Stats<>::
-stats.gd::GDScript::-1::1706414806::0::1::::Stats<>Resource<>::
+enemy_stats.gd::GDScript::-1::1707320072::0::1::::EnemyStats<>Stats<>::
+stats.gd::GDScript::-1::1707323594::0::1::::Stats<>Resource<>::
 ::res://enemie/::1706399434
-::res://enemie/spiky/::1707319117
-spiky_attack_action.gd::GDScript::-1::1707318526::0::1::::<>EnemyAction<>::
+::res://enemie/spiky/::1707330555
+spiky_attack_action.gd::GDScript::-1::1707320595::0::1::::<>EnemyAction<>::
 spiky_block_action.gd::GDScript::-1::1707318603::0::1::::<>EnemyAction<>::
-spiky_enemy.tres::Resource/Resource::6577799806943419298::1706428987::0::1::::<><>::uid://1fblmeiw8tq1<>res://custom_resources/enemy_stats.gd<>uid://dr08asplmuesx
-spiky_enemy_ai.tscn::PackedScene::1835312820938482926::1707319117::0::1::::<><>::res://Scenes/enemie/enemy_action_picker.gd<>res://enemie/spiky/spiky_attack_action.gd<>res://enemie/spiky/spiky_block_action.gd<>res://enemie/spiky/spiky_mega_block_action.gd
+spiky_enemy.tres::Resource/EnemyStats::6577799806943419298::1707323594::0::1::::<><>::uid://1fblmeiw8tq1<>res://custom_resources/enemy_stats.gd<>uid://dr08asplmuesx
+spiky_enemy_ai.tscn::PackedScene::1835312820938482926::1707330555::0::1::::<><>::res://Scenes/enemie/enemy_action_picker.gd<>res://enemie/spiky/spiky_attack_action.gd<>res://enemie/spiky/spiky_block_action.gd<>res://enemie/spiky/spiky_mega_block_action.gd
 spiky_mega_block_action.gd::GDScript::-1::1706439701::0::1::::<>EnemyAction<>::
-::res://global/::1706446406
-events.gd::GDScript::-1::1706445343::0::1::::<>Node<>::
-::res://Scenes/::1706409516
-::res://Scenes/battle/::1707319117
-battle.gd::GDScript::-1::1707317382::0::1::::<>Node2D<>::
-battle.tscn::PackedScene::730937473433157670::1707319117::0::1::::<><>::res://Scenes/battle/battle.gd<>uid://bp804i5pubrud<>uid://bn3objseb56j6<>uid://dradn508gnew4<>res://Scenes/player/player_handler.gd<>res://Scenes/ui/hand.gd<>uid://b8kqwibvoa6o6<>res://Scenes/enemie/enemy_handler.gd<>uid://bnwl2xkp2bx2e<>res://Scenes/player/player.gd<>res://Scenes/ui/battle_ui.gd<>uid://c3c5yjbs7xsnc<>uid://pq07le5eyk74<>uid://bq2cap6jyw38a<>uid://du8ghehobgghw<>uid://c6xexdiscqqn5<>uid://c17pagbfe8fdy<>uid://bto52r64wjodk
-::res://Scenes/card_ui/::1707319117
+::res://global/::1707323322
+events.gd::GDScript::-1::1707323322::0::1::::<>Node<>::
+::res://Scenes/::1707325870
+::res://Scenes/battle/::1707330555
+battle.gd::GDScript::-1::1707327907::0::1::::<>Node2D<>::
+battle.tscn::PackedScene::730937473433157670::1707330555::0::1::::<><>::res://Scenes/battle/battle.gd<>uid://bp804i5pubrud<>uid://bn3objseb56j6<>uid://dradn508gnew4<>res://Scenes/player/player_handler.gd<>res://Scenes/ui/hand.gd<>uid://b8kqwibvoa6o6<>res://Scenes/enemie/enemy_handler.gd<>uid://bnwl2xkp2bx2e<>res://Scenes/player/player.gd<>res://Scenes/ui/battle_ui.gd<>uid://c3c5yjbs7xsnc<>uid://pq07le5eyk74<>uid://bq2cap6jyw38a<>uid://du8ghehobgghw<>uid://c6xexdiscqqn5<>uid://c17pagbfe8fdy<>uid://bto52r64wjodk
+playerhealth.gd::GDScript::-1::1707321310::0::1::::<>TextureProgressBar<>::
+::res://Scenes/card_ui/::1707330555
 card_state_machine.gd::GDScript::-1::1706388112::0::1::::CardStateMachine<>Node<>::
 card_ui.gd::GDScript::-1::1706441935::0::1::::CardUI<>Control<>::
-card_ui.tscn::PackedScene::7182815889699818788::1707319117::0::1::::<><>::uid://b470oxtrxqjsp<>res://Scenes/card_ui/card_ui.gd<>uid://dpn64llk0sac0<>res://Scenes/card_ui/card_state_machine.gd<>res://Scenes/card_ui/card_states/card_base_state.gd<>res://Scenes/card_ui/card_states/card_clicked_state.gd<>res://Scenes/card_ui/card_states/card_dragging_state.gd<>res://Scenes/card_ui/card_states/card_released_state.gd
-::res://Scenes/card_ui/card_states/::1706438973
+card_ui.tscn::PackedScene::7182815889699818788::1707330555::0::1::::<><>::uid://b470oxtrxqjsp<>res://Scenes/card_ui/card_ui.gd<>uid://dpn64llk0sac0<>res://Scenes/card_ui/card_state_machine.gd<>res://Scenes/card_ui/card_states/card_base_state.gd<>res://Scenes/card_ui/card_states/card_clicked_state.gd<>res://Scenes/card_ui/card_states/card_dragging_state.gd<>res://Scenes/card_ui/card_states/card_released_state.gd
+::res://Scenes/card_ui/card_states/::1707322751
 card_base_state.gd::GDScript::-1::1706423037::0::1::::<>CardState<>::
 card_clicked_state.gd::GDScript::-1::1706424982::0::1::::<>CardState<>::
 card_dragging_state.gd::GDScript::-1::1706424994::0::1::::<>CardState<>::
-card_released_state.gd::GDScript::-1::1706438973::0::1::::<>CardState<>::
+card_released_state.gd::GDScript::-1::1707322751::0::1::::<>CardState<>::
 card_state.gd::GDScript::-1::1706388112::0::1::::CardState<>Node<>::
-::res://Scenes/enemie/::1707319117
-enemy.gd::GDScript::-1::1706439464::0::1::::Enemy<>Area2D<>::
-enemy.tscn::PackedScene::4724307483343433143::1707319117::0::1::::<><>::uid://dr08asplmuesx<>res://Scenes/enemie/enemy.gd<>uid://c0ylnwqa23tyw
+::res://Scenes/enemie/::1707330555
+enemy.gd::GDScript::-1::1707323309::0::1::::Enemy<>Area2D<>::
+enemy.tscn::PackedScene::4724307483343433143::1707330555::0::1::::<><>::uid://dr08asplmuesx<>res://Scenes/enemie/enemy.gd<>uid://c0ylnwqa23tyw
 enemy_action.gd::GDScript::-1::1707318481::0::1::::EnemyAction<>Node<>::
-enemy_action_picker.gd::GDScript::-1::1707318970::0::1::::EnemyActionPicker<>Node<>::
-enemy_action_picker.tscn::PackedScene::7539754587258363904::1707319117::0::1::::<><>::res://Scenes/enemie/enemy_action_picker.gd
-enemy_handler.gd::GDScript::-1::1706428079::0::1::::EnemyHandler<>Node2D<>::
-::res://Scenes/player/::1707319103
+enemy_action_picker.gd::GDScript::-1::1707319620::0::1::::EnemyActionPicker<>Node<>::
+enemy_handler.gd::GDScript::-1::1707319539::0::1::::EnemyHandler<>Node2D<>::
+::res://Scenes/map/::1707330628
+play.gd::GDScript::-1::1707326850::0::1::::<>TextureButton<>::
+map.tscn::PackedScene::4577222995774155276::1707330628::0::1::::<><>::uid://cqqm1m7e8vmsq<>res://Scenes/map/shop.gd<>uid://c6xexdiscqqn5<>uid://g82gw20bp57s<>uid://bnwl2xkp2bx2e<>res://Scenes/map/play.gd<>uid://c17pagbfe8fdy
+shop.gd::GDScript::-1::1707326874::0::1::::<>TextureButton<>::
+::res://Scenes/player/::1707322450
 player.gd::GDScript::-1::1707319103::0::1::::Player<>Node2D<>::
-player_handler.gd::GDScript::-1::1707318699::0::1::::PlayerHandler<>Node<>::
+player_handler.gd::GDScript::-1::1707322450::0::1::::PlayerHandler<>Node<>::
 ::res://Scenes/ui/::1706441979
 battle_ui.gd::GDScript::-1::1706411189::0::1::::BattleUI<>CanvasLayer<>::
 hand.gd::GDScript::-1::1706441979::0::1::::Hand<>HBoxContainer<>::
