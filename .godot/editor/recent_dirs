@@ -1,11 +1,11 @@
-res://Art
-res://Scenes/map
-res://carnivalee-freakshow-font
-res://Scenes/player
 C:/Users/tiago/KCODE/Godot_Projects/GGJ_24/GGJ2024/Build
+res://global
+res://Art
+res://carnivalee-freakshow-font
+res://Scenes/map
+res://Scenes/player
 res://characters/player/cards
 res://characters/player
-res://global
 res://Scenes/enemie
 res://enemie/spiky
 res://

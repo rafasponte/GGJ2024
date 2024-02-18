@@ -18,6 +18,7 @@ config/icon="res://Art/clown-face.png"
 [autoload]
 
 Events="*res://global/events.gd"
+Gold="*res://global/gold.gd"
 
 [display]
 

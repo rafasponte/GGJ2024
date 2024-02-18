@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6higui737uwq"]
+[gd_scene load_steps=9 format=3 uid="uid://b6higui737uwq"]
 
 [ext_resource type="Texture2D" uid="uid://cqqm1m7e8vmsq" path="res://Art/map.PNG" id="1_emmii"]
 [ext_resource type="Script" path="res://Scenes/map/shop.gd" id="2_rfq78"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bnwl2xkp2bx2e" path="res://Art/frame_01_palhaco.png" id="4_lil8t"]
 [ext_resource type="Script" path="res://Scenes/map/play.gd" id="5_yyfgh"]
 [ext_resource type="FontFile" uid="uid://c17pagbfe8fdy" path="res://carnivalee-freakshow-font/CarnivaleeFreakshow-DLrm.ttf" id="6_6jrr1"]
+[ext_resource type="Texture2D" uid="uid://b3pxba5dvorco" path="res://Art/Tiny shop.png" id="7_sad6w"]
 
 [node name="map" type="Node2D"]
 
@@ -29,6 +30,11 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(55, 113)
 scale = Vector2(0.091491, 0.091491)
 texture = ExtResource("3_qn8yi")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Shop"]
+position = Vector2(47, 48)
+scale = Vector2(0.0800009, 0.0800009)
+texture = ExtResource("7_sad6w")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(263, 478)
