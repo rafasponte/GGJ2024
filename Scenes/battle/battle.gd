@@ -4,8 +4,8 @@ extends Node2D
 
 @onready var battle_ui: BattleUI = $BattleUI as BattleUI
 @onready var player_handler: PlayerHandler = $PlayerHandler as PlayerHandler
-#@onready var player: Player = $Player as Player
 @onready var enemy_handler: EnemyHandler = $EnemyHandler as EnemyHandler
+
 
 func _ready() -> void:
 	var new_stats: CharacterStats = char_stats.create_instance()
@@ -41,6 +41,7 @@ func _on_player_died() -> void:
 func _on_enemy_died() -> void:
 	print("Victory!")
 	$Win.visible = true
+	Gold.change_gold(100)
 	get_tree().create_timer(1.5, false).timeout.connect(
 		func():
 			get_tree().change_scene_to_file("res://Scenes/map/map.tscn")
